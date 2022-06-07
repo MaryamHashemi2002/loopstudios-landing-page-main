@@ -1,0 +1,220 @@
+body {
+  font-family: jose;
+}
+
+:root {
+  --white: #ffffff;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/desktop/image-hero.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 3.5rem 0;
+}
+
+.navbar-nav {
+  gap: 1.5rem;
+}
+.navbar-nav .nav-item {
+  color: var(--white);
+}
+.navbar-nav .nav-item::after {
+  content: "";
+  display: block;
+  width: 0;
+  inset: 0;
+  margin-inline: auto;
+  height: 2px;
+  background-color: var(--white);
+  transition: all 0.7s ease;
+}
+.navbar-nav .nav-item:hover::after {
+  width: 40%;
+  color: aqua;
+}
+.navbar-nav .nav-link {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.title-container {
+  margin: 7.5rem 0;
+  color: var(--white);
+  width: min(100%, 670px);
+  border: 2px solid var(--white);
+  padding: 2.75rem 2.75rem 2rem;
+}
+.title-container .title {
+  margin-bottom: 0;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: clamp(2rem, 1.5rem + 4vw, 4.75rem);
+}
+
+.benefit {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+.benefit .container {
+  position: relative;
+}
+.benefit-image {
+  width: min(750px, 100%);
+}
+.benefit-description {
+  background-color: var(--white);
+  right: 0;
+  bottom: 0;
+  width: 600px;
+  position: absolute;
+  padding: 5rem;
+  padding-bottom: 0;
+}
+.benefit-title {
+  text-transform: uppercase;
+  font-size: clamp(2rem, 1.5rem + 1.5vw, 3rem);
+}
+.benefit-text {
+  margin-bottom: 0;
+  font-weight: 700;
+  color: rgb(76, 74, 74);
+}
+
+.portfolio {
+  margin: 6rem 0 10rem;
+}
+.portfolio-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.portfolio-header .row {
+  width: 100%;
+  margin-top: 2rem;
+}
+.portfolio-title {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.portfolio-btn {
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  padding: 2rem 0.5rem;
+  letter-spacing: 4px;
+  transition: all 0.8s ease;
+}
+.portfolio-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+.portfolio-item {
+  position: relative;
+  cursor: pointer;
+}
+.portfolio-item-overlay {
+  background: linear-gradient(rgba(133, 135, 140, 0.1), rgba(50, 50, 54, 0.5));
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: all 0.5s ease;
+}
+.portfolio-item:hover .portfolio-item-overlay {
+  background: linear-gradient(rgba(133, 135, 140, 0.6), rgba(133, 135, 140, 0.6));
+  transition: all 0.5s ease;
+}
+.portfolio-item-title {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 1rem;
+  color: var(--white);
+}
+.portfolio-image {
+  width: 100%;
+}
+
+footer {
+  padding: 6rem 0;
+  background-color: #000000;
+}
+footer .footer-logo {
+  height: 28px;
+  margin-bottom: 2rem;
+}
+footer .footer-social {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+footer a {
+  text-decoration: none;
+  display: inline-block;
+}
+footer img {
+  height: 28px;
+}
+footer p {
+  color: var(--white);
+  font: weight 700px;
+  text-align: right;
+  margin-bottom: 0;
+  padding: 8px 0;
+}
+
+@media screen and (max-width: 991px) {
+  .offcanvas {
+    background-color: #000000;
+    background-clip: unset;
+  }
+  .offcanvas .offcanvas-header {
+    justify-content: flex-end;
+  }
+  .offcanvas .btn-close {
+    width: unset;
+    height: unset;
+    padding: 2rem;
+  }
+  .offcanvas .navbar-nav {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .benefit-description {
+    position: static;
+    width: 100%;
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  footer .footer-logo {
+    display: block;
+    margin-inline: auto;
+  }
+  footer .navbar-nav {
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  footer .footer-social {
+    justify-content: center;
+    padding-top: 15px;
+  }
+  footer p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 575px) {
+  .title-container {
+    padding: 1.75rem;
+  }
+}/*# sourceMappingURL=style.css.map */
